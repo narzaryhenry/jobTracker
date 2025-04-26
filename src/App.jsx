@@ -1,4 +1,5 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function Dashboard() {
   return <h1 className="text-2xl font-bold p-4">Dashboard</h1>;
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/kanban" element={<KanbanBoard />} />
